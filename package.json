@@ -1,0 +1,17 @@
+{
+  "name": "myonlinemusicstore",
+  "version": "1.0.0",
+  "description": "Sample online music store that will enable the client to mobilize their business by allowing a customer to purchase different music related items directly from the website",
+  "main": "App.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Patrick B. Matshumba",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "mongoose": "^5.5.5"
+  }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Add Product</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script
+      src="http://code.jquery.com/jquery-3.4.0.js"
+      integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
+      crossorigin="anonymous">
+  </script>
+  <script src="/assets/Products.js"></script>
+  <link rel="stylesheet" href="/assets/Styles.css" type="text/css">
+</head>
+<body>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/">O Music Store</a>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="/add">Add Product</a>
+          </li>
+        </ul>
+      </div>
+      <a href="/cart" class="btn btn-primary">
+        <i class="fa fa-shopping-cart mr-sm-2" style="font-size:24px"></i>Cart
+      </a>
+    </nav>
+    <br>
+    <div class="container col-md-6">
+      <h2>Add a Music Product</h2>
+      <div class="alert alert-success" role="alert" id='addedSuccessfully'>
+          Product added successfully!   Go to <a href="/" class="alert-link">Home</a>
+      </div>
+      <form>
+        <div class="form-group">
+            <label for="productId">Unique ID</label>
+            <input type="text" class="form-control" id='productID'>
+          </div>
+        <div class="form-group">
+          <label for="productName">Product Name</label>
+          <input type="text" class="form-control" id='productName'>
+        </div>
+        <div class="form-group">
+          <label for="productDes">Product Description</label>
+          <textarea class="form-control" id="productDes"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" id='submit'>Add</button>
+      </form>
+    </div>
+    <br><br>
+    <footer id="footer" class="text-center bg-dark">
+        <br>
+        <p>Copyright 2019 &copy; <b>O Music Store</b></p>
+        <p>Devloped by <b>Tharun Thabeti</b></p>
+        <br>
+      </footer>
+  </div>
+</body>
+</html>

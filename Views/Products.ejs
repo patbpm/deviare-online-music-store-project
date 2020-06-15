@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Products</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script
+      src="http://code.jquery.com/jquery-3.4.0.js"
+      integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
+      crossorigin="anonymous">
+  </script>
+  <script src="/assets/Products.js"></script>
+  <link rel="stylesheet" href="/assets/Styles.css" type="text/css">
+</head>
+<body>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/">O Music Store</a>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="/add">Add Product</a>
+          </li>
+        </ul>
+      </div>
+      <a href="/cart" class="btn btn-primary">
+        <i class="fa fa-shopping-cart mr-sm-2" style="font-size:24px"></i>Cart  
+      </a>
+    </nav>
+    <div class='container m-3' id="productsList">
+      <div class="alert alert-success" role="alert" id="addCartSuccess">
+          Added to cart successfully!  View&nbsp;<a href="/cart" class="alert-link"> Cart</a>
+      </div>
+      <br>
+      <div class="card-deck m-3">
+        <% for (var i=0;i<products.length; i++) {%>
+          <div class="col-md-4">
+            <div class="card bg-light text-center mb-5" style="width: 18rem;">
+                <div class="card-body">
+                  <img src="/assets/Img/Music_Placeholder.png" class="card-img-top" alt="Album_Placeholder">
+                  <br><br>
+                  <h3 class="card-title"><%= products[i].productName %></h5>
+                  <p class="card-text"><%= products[i].productDes %></p>
+                  <button class="btn btn-info addToCart" id="<%- products[i].productID %>%<%- products[i].productName %>%<%- products[i].productDes %>"><i class="fa fa-cart-plus mr-sm-2" style="font-size:24px"></i>
+                    Add to cart</button>
+                </div>
+              </div>
+            </div> 
+        <% } %>
+      </div>
+    </div>
+    <br><br>
+    <footer id="footer" class="text-center bg-dark">
+      <br>
+      <p>Copyright 2019 &copy; <b>O Music Store</b></p>
+      <p>Devloped by <b>Tharun Thabeti</b></p>
+      <br>
+    </footer>
+  </div>
+</body>
+</html>

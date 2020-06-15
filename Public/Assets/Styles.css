@@ -1,0 +1,33 @@
+.body{
+    transition-duration: .5s;
+}
+
+.card-img-top{
+    width: 150px;
+    height: 150px;
+}
+
+#addedSuccessfully, #addCartSuccess{
+ transform: scale(0);
+ transition-duration: .5s;
+}
+
+.card-img{
+    width: 150px;
+    height: 150px;
+}
+
+.card{
+    transform: scale(1);
+    transition-duration: .6s;
+}      
+
+.card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 8px 0 rgba(17, 22, 26, 0.16), 0 4px 8px 0 rgba(17, 22, 26, 0.08), 0 8px 16px 0 rgba(17, 22, 26, 0.08);
+    transition-duration: .6s;
+}
+footer{
+    color: burlywood;
+    font-size: 20px;
+}

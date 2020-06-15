@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Cart</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script
+      src="http://code.jquery.com/jquery-3.4.0.js"
+      integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
+      crossorigin="anonymous">
+  </script>
+  <script src="/assets/Products.js"></script>
+  <link rel="stylesheet" href="/assets/Styles.css" type="text/css">
+</head>
+<body>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/">O Music Store</a>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="/add">Add Product</a>
+          </li>
+        </ul>    
+      </div>
+      <a href="/cart" class="btn btn-success">
+        <i class="fa fa-shopping-cart mr-sm-2" style="font-size:24px"></i>Cart
+      </a>
+    </nav>
+    <br><br>
+    <div class="container">
+    <% if(cartlist.length>0) { %>
+    <% for (var i=0;i<cartlist.length; i++) {%>
+    <div class="card mb-2 bg-light" style="max-width: 550px; max-height: 200px;">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <img src="/assets/Img/Music_Placeholder.png" class="card-img m-3" alt="Album">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><%= cartlist[i].productName %></h5>
+            <p class="card-text"><%= cartlist[i].productDes %></p>
+            <button class="btn btn-danger removeCart" id="<%= cartlist[i].productID %>"><i class="fa fa-window-close mr-sm-2" style="font-size:24px"></i>
+              Remove</button>
+          </div>
+        </div>
+      </div>
+      </div>
+      <% }} else{ %>
+        <div class="alert alert-danger" role="alert">
+          You haven't added any products   Go <a href="/" class="alert-link">Home</a> to add products to cart
+        </div>
+      <%}%>
+    </div>
+    <br><br>
+    <footer id="footer" class="text-center bg-dark">
+        <br>
+        <p>Copyright 2019 &copy; <b>O Music Store</b></p>
+        <p>Devloped by <b>Tharun Thabeti</b></p>
+        <br>
+      </footer>
+  </div>             
+</body>
+</html>
